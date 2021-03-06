@@ -1,0 +1,560 @@
+*{
+ 	margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Open Sans','Ubuntu', sans-serif;
+}
+body{
+	/*background-color: rgba(0,0,0,0.1);*/
+	background-color: var(--BckFound);
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+.iconify{
+	font-size: 24px;
+}
+
+:root{
+	--BackWht:#ffffff;
+	--BckFound:#ecf0f1;
+	--MenuSecond:#34495e;
+	--Pagination: #2c3e50;
+	--MenuFirst:#0A3D62;
+	--ColorSave: #28a745;
+	--ColorAdd: #3f51b5 ;
+	--ColorCancel: #f44336;
+	--ColorUpdate: #9c27b0;
+	--ColorInfo: #03a9f4;
+	--ColorRed:#dc3545;
+	--ColorBlue: #2980b9;
+	--ColorYellow:#f1c40f;
+	--ColorOrange:#ff9800;
+	--ColorAdmin:#c0392b;
+}
+input[type=checkbox] {
+  transform: scale(1.7);
+  background-color: var(--ColorSave);
+}
+input[type=checkbox]:checked{
+  background-color: var(--ColorSave);
+}
+.Content{
+	display: grid;
+	grid-gap: 15px;
+	/*position: absolute;*/
+	grid-template-columns: 100px 1fr;
+	grid-template-rows: repeat(12,1fr);
+	width: 100%;
+	min-height: 100vh;
+}
+.Title{
+	font-size: 1.5em;
+	padding-right: 10px;
+}
+
+.SubMenuContent{
+	position: relative;
+	/*background-color: #ffffff;*/
+	/*background-color: #28648F;*/
+	/*background-color: rgba(149, 165, 166,0.5);*/
+	background-color: #5B6B75;
+	left: 0px;
+	width: 100%;
+	height: 800px;
+	z-index: 1000;
+}
+
+/*.NavRg{
+	width: 310px;
+	animation-name: MenusApp;
+    animation-duration: 1s;
+}
+@keyframes MenusApp{
+    from{width: 100px}
+    to{width: 310px}
+}
+
+.NavLf{
+	width: 100px;
+	animation-name: MenusApp2;
+    animation-duration: 1s;
+}
+@keyframes MenusApp2{
+    from{width: 310px}
+    to{width: 100px}
+}
+
+.NavDw{
+	width: 100px;
+	animation-name: MenusApp3;
+    animation-duration: 1s;
+}
+@keyframes MenusApp3{
+    from{top: 0}
+    to{top: 100%}
+}*/
+
+.SubMenu{
+	display: none;
+	height: 15px;
+	margin-top:80px;
+	width: 100%;
+	color: #fff;
+}
+
+.ContentLogo h1{
+	border-bottom: 1px solid #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 70px;
+	font-size: 1.8em;
+}
+.BtnMenu{
+	width: 100px;
+	height: 70px;
+	display: flex;
+	align-content: center;
+}
+.BtnMenu span{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--BackWht);
+	width: 100%;
+}
+.BtnMenu>span:hover{
+	background-color: #fff;
+	color: var(--MenuFirst);
+    border-right: 1px solid var(--MenuFirst);
+}
+.Select span{
+	background-color: var(--BackWht);
+	/*background-color: #28648F;*/
+	/*background-color: rgba(149, 165, 166,0.8);*/
+	color: var(--MenuFirst);
+	/*color: var(--BackWht);*/
+}
+.BtnSubMenu{
+	padding-left: 8px;
+	width: 100%;
+	height: 35px;
+	display: flex;
+	align-content: center;
+}
+/*Efecto hover sub menu*/
+.BtnSubMenu:hover{
+	background-color: rgba(149, 165, 166,0.8);
+}
+/*Reportes*/
+.SubMainReport{
+	display: none;
+	padding-left: 10px;
+	width: 100%;
+	background-color: #ffffff;
+}
+.ContentReport{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.ContentReport>.BtnSubMenu{
+	display: inline-block;
+	width: 100%;
+}
+.ActiveMainReport{
+	display: block;
+}
+.ContentReport{
+	display: none;
+}
+/*Reportes*/
+
+/*Menu*/
+
+/*Menú*/
+.ContentMenu{
+    display: flex;
+    flex-direction: row;
+	box-sizing: content-box;
+	width: 100px;
+	grid-column: 1/1;
+	grid-row: 1/-1;
+	background-color: var(--MenuFirst);
+	z-index: 990;
+	animation-name: MenusApp2;
+    animation-duration: 1s;
+}
+.MenuItems{
+	display: flex;
+	flex-direction: column;
+}
+/*Menú*/
+
+/*content Principal*/
+.ContentHeader{
+	width: 90%;
+	height: 60px;
+	padding: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 16px;
+	border-radius: 8px;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.BtnNavBar{
+	display: flex;
+	flex-direction: column;
+}
+.BtnNavBar:hover{
+	border-radius: 5px;
+	border: 2px solid var(--MenuFirst);
+	padding: 5px;
+}
+.LineNavBar{
+	border-bottom: 2px solid #003366;
+	width: 30px;
+	height: 6px;
+	/*background-color: #003366;*/
+}
+.ContentBody{
+	height: 100vh;
+	margin-top: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	grid-column: 2/-1;
+	grid-row: 1/-1;
+	overflow-y: auto;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.ContentBody::-webkit-scrollbar {
+    display: none;
+}
+/*content Principal*/
+
+/*Botones*/
+.BtnHomeContent{
+	margin-bottom: 8px;
+}
+.Btn{
+	display: inline-block;
+    background-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0.5rem;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: .55rem;
+}
+.BtnSm{
+	display: inline-block;
+    background-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0.5rem;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: .55rem;
+}
+.BtnSmall{
+	display: inline-block;
+    background-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0.5rem;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: .55rem;
+}
+.BtnSmall>span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.Btn>span{
+	display: inline-block;
+	width: 90px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.BtnSm>span{
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	/*margin-bottom: 8px;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ContentBtn{
+	display: flex;
+	margin: 10px;
+}
+.BtnAdd{
+	color: var(--ColorBlue);
+	font-size: 2rem;
+}
+.BtnPagination{
+	color: var(--Pagination);
+	border-color: var(--Pagination);
+}
+.BtnPagination:hover{
+	color: var(--BackWht);
+	background-color: var(--Pagination);
+	border-color: var(--Pagination);
+}
+.OutSuccess{
+	color: var(--ColorSave);
+    border-color: var(--ColorSave);
+}
+.OutSuccess:hover{
+	background: var(--ColorSave);
+	color: #ffffff;
+    border-color: var(--ColorSave);
+}
+
+.OutDanger{
+	color: #dc3545;
+    border-color: #dc3545;
+}
+.OutDanger:hover{
+	background: #dc3545;
+	color: #ffffff;
+    border-color: #dc3545;
+}
+
+.OutNext{
+	color: #2980b9;
+    border-color: #2980b9;
+}
+.OutNext:hover{
+	background: #2980b9;
+	color: #ffffff;
+    border-color: #2980b9;
+}
+
+.OutBefore{
+	color: #f1c40f;
+    border-color: #f1c40f;
+}
+.OutBefore:hover{
+	background: #f1c40f;
+	color: #ffffff;
+    border-color: #f1c40f;
+}
+
+/*Botones*/
+/**************************************************************/
+
+/*************************************************************
+
+/*Formulario*/
+.ContentForm{
+	display: none;
+}
+
+.ActiveForm{
+	display: block;
+	animation-name: ActiveForm;
+    animation-duration: 1s;
+}
+
+@keyframes ActiveForm{
+    from{top:-330px; opacity: 0;}
+    to{top: 0;opacity: 1;}
+}
+.CustomerContent{
+	background-color: #ffffff;
+	border-radius: 5px;
+	width: 90%;
+	min-height: 400px;
+	padding: 16px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ContentBtn{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-top: 2px solid var(--ColorYellow);
+	padding-top: 16px;
+}
+
+
+/*.iconify:hover { width: 20px; height: 20px; }*/
+.SeccionItems{
+	display: flex;
+	align-items: center;
+}
+/*Table*/
+
+
+.Table{
+	table-layout: fixed;
+	border-collapse: collapse;
+	width: 100%;
+	width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+
+}
+
+.TableHead{
+	display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border: 1px solid #dee2e6;
+    font-size: 3em;
+}
+.TableHead tr th{
+	background: #353b48;
+	color: #fff;
+	border: 1px solid #dee2e6;
+	padding: 5px;
+	font-size: 1em;
+
+}
+
+.TableBody tr td{
+	border: 1px solid #dee2e6;
+}
+
+tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+.TextCenter{
+	text-align: center;
+}
+.TextLeft{
+	text-align: left;
+	padding-left: 5px;
+}
+.TextRight{
+	text-align: right;
+}
+.TableItems{
+	width: 3%;
+	padding: 3px;
+}
+.TableCode{
+	width: 8%;
+	padding: 3px;
+}
+.TableDescription{
+	width: 25%;
+	padding: 3px;
+}
+.TableContact{
+	width: 16%;
+	padding: 3px;
+}
+.TablePhone{
+	width: 10%;
+	padding: 3px;
+}
+.TableMail{
+	width: 20%;	
+	padding: 3px;
+}
+.TableAction{
+	width: 10%;
+	padding: 3px;
+}
+.ContentPagination{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+/*Table*/
+
+/*formularios*/
+.InputGroup{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.LabelInput{
+	margin-bottom: 4px;
+	font-size: 1em;
+}
+.InputItems{
+	margin-bottom: 4px;
+	width: 100%;
+	height: 30px;
+	font-size: 1.2rem;
+	border: 1px solid #c3c3c3;
+}
+.InputComision{
+	margin-bottom: 4px;
+	width: 20%;
+	height: 30px;
+	font-size: 1.2rem;
+	border: 1px solid #c3c3c3;
+}
+
+.InputText{
+  	resize: none;
+  	margin-bottom: 4px;
+	width: 100%;
+	height: 80px;
+	font-size: 1.2rem;
+	border: 1px solid #c3c3c3;
+}
+.TipoDocItems{
+	margin-bottom: 4px;
+	width: 90%;
+	height: 30px;
+	font-size: 1.2rem;
+	border: 1px solid #c3c3c3;	
+}
+.DocumentItems{
+	margin-bottom: 4px;
+	width: 100%;
+	height: 30px;
+	font-size: 1.2rem;
+	border: 1px solid #c3c3c3;		
+}
+.InputItems:focus{
+	outline: 0;
+	border-bottom: 2px solid #003366;
+	animation-name: focus-input;
+  	animation-duration: 1s;
+}
+@keyframes focus-input {
+  from{left: 0; opacity: 0;}
+    to{right: 100%;opacity: 1;}
+}
+
+.TypeDoc{
+	width: 95%;
+}
+.BtnAfter{
+	display: none;
+}
+/*Formulario*/

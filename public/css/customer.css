@@ -1,0 +1,144 @@
+/*Formulario*/
+.FormContentSecond{
+	display: none;
+}
+.FormContentFirst, .ContentInfoTwo{
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(12, 1fr);
+}
+.SubBtnContent{
+	display: none;
+}
+
+.TitleForm{
+	border-bottom: 0.25rem solid var(--ColorYellow);
+	grid-column: 1/-1;
+	grid-row: 1/1;
+	display: flex;
+	flex-direction: row;
+}
+.TitleFormItems{
+	font-size: 1.5rem;
+
+}
+.FormAlert{
+	background-color: var(--ColorSave);
+	padding: 5px;
+	margin-left: 200px;
+	font-size: 1.5rem;
+	grid-column: 5/8;
+	grid-row: 1/1;
+}
+.InputCode{
+	grid-column: 1/7;
+	grid-row: 2/2
+}
+.InputDescription{
+	grid-column: 1/7;
+	grid-row: 3/3;
+}
+.InputTypeDoc{
+	grid-column: 1/4;
+	grid-row: 4/4;	
+}
+.InputDocument{
+	grid-column: 4/7;
+	grid-row: 4/4;	
+}
+.InputTypeCustomer{
+	grid-column: 1/5;
+}
+.InputContact{
+	grid-column: 7/-1;
+	grid-row: 4/4;
+}
+.InputAdress1{
+	grid-column: 7/-1;
+	grid-row: 2/2;
+}
+.InputAdress2{
+	grid-column: 7/-1;
+	grid-row: 3/3;
+}
+.InputAdress3{
+	grid-column: 7/-1;
+	grid-row: 4/4;
+}
+.InputDate{
+	grid-column: 7/9;
+	grid-row: 5/5;
+}
+.InputPhone1{
+	grid-column: 1/4;
+	grid-row: 2/2;
+}
+.InputPhone2{
+	grid-column: 4/7;
+	grid-row: 2/2;
+}
+.InputMovil1{
+	grid-column: 1/4;
+	grid-row: 3/3;
+}
+.InputMovil2{
+	grid-column: 4/7;
+	grid-row: 3/3;
+}
+.InputMail{
+	grid-column: 1/4;
+	grid-row: 4/4;
+}
+.InputMailAlt{
+	grid-column: 4/7;
+	grid-row: 4/4;	
+}
+.InputPrice{
+	grid-column: 1/4;
+	grid-row: 5/5;
+}
+.InputExempt{
+	grid-column: 11/-1;
+	grid-row: 2/4;
+}
+.InputSite{
+	grid-column: 5/9;
+	grid-row: 5/5;
+}
+.InputFaceBook{
+	grid-column: 5/9;
+	grid-row: 6/6;
+}
+.InputTwitter{
+	grid-column: 9/-1;
+	grid-row: 5/5;
+}
+.InputInstagram{
+	grid-column: 9/-1;
+	grid-row: 6/6;
+}
+.InputCreditLimit{
+	grid-column: 7/11;
+	grid-row: 2/2;
+}
+.InputCreditDay{
+	grid-column: 7/9;
+	grid-row: 3/3;
+}
+.InputPlusDay{
+	grid-column: 9/11;
+	grid-row: 3/3;
+}
+.InputDayCredit{
+	grid-column: 11/-1;
+	grid-row: 3/3;
+}
+.InputStatus{
+	border: 1px solid #c2c2c2;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	grid-column: 11/-1;
+	grid-row:5/5;
+}

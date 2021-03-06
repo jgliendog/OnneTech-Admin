@@ -1,0 +1,205 @@
+.FrmOperation{
+	background-color: #ffffff;
+	width: 100%;
+	height:100vh;
+	display: grid;
+	grid-template-areas: 
+		"Header Header Header"
+		"Data Data Totals"
+		"Details Details Details"
+		"Footer Footer Footer";
+		grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 8vh 32vh 50vh 10vh;
+}
+.ClosedMenu{
+	display: none;
+}
+/*Áreas*/
+.HeaderOperation{
+	padding: 0 16px;
+	background-color: #fff;
+	grid-area: Header;
+	background-color: #003366;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.LineNavBar{
+	border-bottom: 2px solid #ffffff;
+	width: 30px;
+	height: 6px;
+}
+
+
+
+.DataOperation{
+	margin-top: 10px;
+	padding-left: 16px;
+	grid-area: Data;
+}
+.TotalsOperation{
+	grid-area: Totals;
+}
+.DetailsOperation{
+	padding: 0 16px;
+	grid-area: Details
+}
+.ContentButton{
+	grid-area: Footer;
+	background-color: #f5f5f5;
+}
+.BtnControl{
+	width: 70%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	/*background-color: #003366;*/
+	height: 100%;
+	padding-left: 25px;
+}
+
+.SelectItems{
+	display: flex;
+	flex-direction: row;
+	/*margin-top: 20px;*/
+}
+.ItemsDescription{
+	display: block;
+	background-color: #f2f2f2;
+	color:green;
+	width: 65%;
+	font-size: 1.5em;
+}
+
+.FrmInputTotales{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+}
+.BordeTotales{
+	margin: 10px;
+	background: #353b48;
+	padding: 10px;
+	width: 95%;
+	border-radius: 8px;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.8);
+	z-index: 1;
+}
+.FrmInputTotales label{
+	color: #f2f2f6;
+	/*color: #32ff7e;*/
+	/*border:1px solid #fff;*/
+	width: 35%;
+	height: 18px;
+}
+
+.FrmInputTotales input{
+	background: #353b48;
+	color: #32ff7e;
+	width: 75%;
+	border:0;
+	text-align: right;
+}
+
+/*Details*/
+.HeaderDetails{
+	background-color: #f5f5f5;
+	width: 100%;
+	height: 25px;
+	display: grid;
+	grid-template-columns: 5% 12% 38% 10% 15% 15% 5%;
+	grid-row: 50px;
+	align-content: center;
+}
+.TableInvDetails::-webkit-scrollbar {
+    display: none;
+}
+.TableInvDetails{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-row: auto;
+	overflow-y: scroll;
+	max-height: 44vh;
+	/*height: 60px;*/
+
+}
+.NodoItems::-webkit-scrollbar {
+    display: none;
+}
+.NodoItems{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 5% 12% 38% 10% 15% 15% 5%;
+	grid-row: auto;
+	overflow-y: scroll;
+	max-height: 44vh;
+	/*height: 60px;*/
+}
+.Input-Col{
+	align-items: flex-start;
+	height: 25px;
+}
+.Col-Code,
+.Col-Description{
+	width: 100%;
+	padding: 3px;
+	outline: 0;
+	border:5;
+	/*user-select: none;*/
+	text-align: left;
+}
+.Col-Nu,
+.Col-Qty{
+	width: 100%;
+	padding: 3px;
+	outline: 0;
+	border:5;
+	outline: 0;
+	/*user-select: none;*/
+	text-align: center;
+}
+.Col-Cost,
+.Col-Totals{
+	width: 100%;
+	padding: 3px;
+	outline: 0;
+	border:5;
+	/*user-select: none;*/
+	text-align: right;
+}
+.ModelTotal{
+	backgound-color: #BDBDBD;
+}
+
+
+
+/*Modal*/
+
+.ContentModal{
+    background: #ffffff;
+    width: 45%;
+    min-height: 30%;
+    border-radius: 5px;
+    animation-name: modal;
+    animation-duration: 1s;
+}
+/*Ventanas Modal*/
+
+.TotalesTranfer{
+	display: flex;
+	flex-direction: row;
+}
+
+.LabelSubTotal{
+	width: 40%;
+}
+
+.CommentTranfer{
+	width: 100%;
+	height: 150px;
+
+}
+

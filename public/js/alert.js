@@ -1,0 +1,4 @@
+const TypeAlert{
+	"type":"successfull"
+	
+}

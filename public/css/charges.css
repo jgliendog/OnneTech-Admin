@@ -1,0 +1,208 @@
+/*.InputGroupBuy{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.InputGroupBuy>select{
+	width: 100%;
+}*/
+
+.FrmCargos,
+.FrmDescargos,
+.FrmAjustes,
+.FrmTransferencias,
+.FrmPlanificador
+{
+	display: grid;
+	grid-template-columns: repeat(24,1fr);
+	grid-template-rows:  repeat(24,1fr);
+	height: 100vh;
+	font-size: 1em;
+}
+
+header{
+	grid-column: 1/-1;
+	height: 30px;
+}
+header h1{
+	font-size: 1em;
+	color: #f2f2f2;
+	padding-left: 20px;
+	vertical-align: center;
+}
+aside{
+	background: #f3f3f3;
+	grid-column: 1/-1;
+	grid-row: 2/8;
+	padding: 10px;
+}
+
+.BtnBuscarLogistica{
+	width: 91px;
+	max-width: 91px;
+	height: 25px;
+	border:1px solid #34495e;
+}
+.BtnNewLogistica{
+	width: 91px;
+	max-width: 91px;
+	height: 25px;
+	border-radius: 0 5px 5px 0;
+	border:1px solid #34495e;
+}
+.BtnSelectItems{
+	width: 150px;
+	max-width: 150px;
+	height: 25px;
+	border-radius: 0 5px 5px 0;
+	border:1px solid #34495e;
+}
+.BtnControlPanel{
+	border-radius: 5px;
+	border:1px solid #34495e;
+}
+.Btn{
+	padding: 5px;
+	font-size: 0.5em;
+	border-radius: 5px;
+	border:1px solid #34495e;
+	height: 30px;
+}
+
+.FrmBodyCompras{
+	background: #ecf0f1;
+	grid-column: 1/-1;
+	grid-row: 8/23;
+}
+
+.TotalesTransaccion{
+	grid-column: 16/-1;
+	grid-row: 2/8;
+}
+.SearchDataSale{
+	width: 55%;
+	height: 25px;
+	margin: 10px;
+}
+.InputLogistica{
+	min-width: 76%;
+	height: 25px;
+	background: #ecf0f1;
+}
+
+
+.SearchDataSale>h6,.SearchDataSale>label{
+	background: #232322;
+	color: #ffffff;
+	min-width: 15%;
+	height: 25px;
+	border-radius: 5px 0 0 5px;
+	border:1px solid #34495e;
+}
+.TipoCambio>label{
+	background: #232322;
+	color: #ffffff;
+	width: 90px;
+	height: 25px;
+	border-radius: 5px 0 0 5px;
+	border:1px solid #34495e;
+}
+
+.InputTipoCambio{
+	width: 100px;
+	max-width: 120px;
+	height: 25px;
+	font-size: 1em;
+	margin-right: 5px;
+}
+.SearchDataSale>select{
+	min-width: 85%;
+	height: 25px;
+	border:1px solid #34495e;
+}
+
+
+
+/*Control para ajustar correctamente los input de los totales y cualquier otra cosa con input*/
+
+.FrmInputData{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+}
+.BtnOperSale{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-content: center;
+	padding-left: 10px;
+}
+.FrmInputData input{
+	border:1px solid #34495e;
+	padding: 5px;
+}
+
+.BuscarItems{
+	width: 100%;
+}
+.QtyVenta{
+	width: 110px;
+}
+.BordeTotales{
+	margin: 10px;
+	background: #353b48;
+	padding: 10px;
+	width: 95%;
+	border-radius: 8px;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.8);
+	z-index: 1;
+}
+
+.FrmInputTotales label{
+	color: #32ff7e;
+	width: 147px;
+	height: 18px;
+}
+
+.FrmInputTotales input{
+	background: #353b48;
+	color: #32ff7e;
+	width: 316px;
+	border:0;
+}
+
+.SearchLogistica{
+	width: 100%;
+}
+.SearchLogistica input{height: 3px;}
+
+.table>thead>tr>th{
+	font-size: 0.8em;
+}
+.DetailCompras{
+	overflow-y: auto;
+	font-size: 0.8em;
+}
+.Nitems{
+	width: 30px;
+}
+.CodItems{
+	width: 180px;
+}
+.QtyItemsDetail{
+	width: 100px;
+	text-align: center;
+}
+.MountItems{
+	width: 200px;
+}
+.ActionItems{
+	width: 30px;
+}
+footer{
+	background: #dcdde1;
+	grid-column: 1/-1;
+	grid-row: 23/-1;
+	padding: 8px 0px 8px 100px;
+}

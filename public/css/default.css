@@ -1,0 +1,873 @@
+/*@import url('normalize.css');*/
+*{
+ 	margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Open Sans','Ubuntu', sans-serif;
+}
+body{
+	/*background-color: rgba(0,0,0,0.1);*/
+	background-color: var(--BckFound);
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+.BtnAdd{
+	border: 3px solid var(--MenuSecond);
+	-webkit-border-radius: 60px;
+	-moz-border-radius: 60px;
+	border-radius: 60px;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.iconify, .BtnAdd>span{
+	color: var(--MenuSecond);
+	font-size: 1.5em;
+	padding-bottom: 3px;
+
+}
+.BtnAdd:hover{
+	width: 32px;
+	height: 32px;
+}
+:root{
+	--BackWht:#ffffff;
+	--BckFound:#ecf0f1;
+	--MenuSecond:#34495e;
+	--Pagination: #2c3e50;
+	--MenuFirst:#0A3D62;
+	--ColorSave: #28a745;
+	--ColorAdd: #3f51b5 ;
+	--ColorCancel: #f44336;
+	--ColorUpdate: #9c27b0;
+	--ColorInfo: #03a9f4;
+	--ColorRed:#dc3545;
+	--ColorBlue: #2980b9;
+	--ColorYellow:#f1c40f;
+	--ColorOrange:#ff9800;
+	--ColorAdmin:#c0392b;
+	--ColorAdmin2: #8C2540;
+}
+input[type=checkbox] {
+  transform: scale(1.7);
+  background-color: var(--ColorSave);
+}
+input[type=checkbox]:checked{
+  background-color: var(--ColorSave);
+}
+.FechaCompras{
+	width: 40%;
+}
+.jlalert{
+	display: none;
+	width: 100%;
+	height: 100vh;
+	background-color: #003366;
+	z-index: 30000;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.Content{
+	display: grid;
+	grid-template-columns: 120px auto;
+	grid-template-rows: repeat(5,auto);
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+}
+.Remplace{
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: repeat(5,auto);
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+}
+.TitleOpartion>span{
+	color: #fff;
+	font-size: 1.6em;
+}
+
+.MenuBarNav{
+	width: 120px;
+	background-color: var(--MenuFirst);
+	grid-row: 1/-1;
+
+}
+
+.Title{
+	font-size: 1.5em;
+	padding-right: 10px;
+}
+
+.ContentLogo h1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 70px;
+	font-size: 1.8em;
+}
+
+.MenuItems{
+	display: flex;
+	flex-direction: column;
+}
+.BtnMenu{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	font-size: 1.2em;
+	color: #f2f2f2;
+}
+.BtnMenu>span{
+	font-size: 0.9em;
+	margin-left: 8px;
+
+}
+.BtnMenu:hover{
+	background-color: grey;
+}
+
+.ContentMenu{
+    display: flex;
+    flex-direction: column;
+	box-sizing: content-box;
+	/*width: 120px;*/
+	background-color: var(--MenuFirst);
+	z-index: 990;
+	animation-name: MenusApp2;
+    animation-duration: 1s;
+    padding-bottom: 16px;
+}
+
+.SubMenu{
+	display: none;
+	background-color: #ffffff;
+	left: 16px;
+	transition: 2s;
+}
+
+.Active{
+	display: block;
+	animation-name: MenusApp;
+    animation-duration: 1s;
+}
+@keyframes MenusApp{
+    from{height: 0; opacity: 0;}
+    to{height: 100%;opacity: 1;}
+}
+.BtnSubMenu{
+	/*display: none;*/
+	display: flex;
+	padding-left: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+}
+.BtnSubMenu:hover{
+	background-color: grey;
+}
+
+.SubMainReport{
+	display: none;
+	background-color: #ffffff;
+}
+.SubMenuReport{
+	display: none;
+}
+
+.ContentBody{
+	width: 100%;
+}
+
+
+/*Nueva sección*/
+
+/*content Principal*/
+.ContentHeader{
+	width: 90%;
+	height:35px;
+	padding: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	/*margin-top: 10px;*/
+	/*border-radius: 8px;*/
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+.BtnNavBar{
+	display: flex;
+	flex-direction: column;
+}
+.BtnNavBar:hover{
+	border-radius: 5px;
+	border: 2px solid var(--MenuFirst);
+	padding: 5px;
+}
+.LineNavBar{
+	border-bottom: 2px solid #003366;
+	width: 30px;
+	height: 6px;
+}
+.ContentBody{
+	height: 100vh;
+	margin-top: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	grid-column: 2/-1;
+	grid-row: 1/-1;
+	overflow-y: auto;
+}
+
+.ContentActionBtm{
+	padding: 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.ContentBody::-webkit-scrollbar {
+    display: none;
+}
+/*content Principal*/
+
+/*Botones*/
+.BtnHomeContent{
+	margin-bottom: 8px;
+}
+
+.Btn{
+	display: inline-block;
+    background-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0.5rem;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: .55rem;
+}
+.BtnAction{
+	display: inline-block;
+    background-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*font-size: 0.1rem;*/
+    padding: 5px;
+    border: 1px solid transparent;
+    margin-bottom: 4px;
+    margin-left: 5px;
+	width: 10%;
+	height: 30px;
+	font-size: 1.2rem;
+	border: 1px solid #c3c3c3;
+}
+.BtnSm{
+	display: inline-block;
+    background-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 1.2rem;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: .55rem;
+}
+.BtnSmTb{
+	display: inline-block;
+    background-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 50%;
+    font-size: 1.2rem;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: .55rem;
+}
+.BtnCtrl{
+	display: inline-block;
+    background-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: .55rem;
+    margin: 0 0.4em;
+}
+.BtnSmall{
+	display: inline-block;
+    background-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0.5rem;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: .55rem;
+}
+.BtnSmall>span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.Btn>span{
+	display: inline-block;
+	width: 90px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.BtnSm>span{
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*Size of Buttom*/
+.BtnSizeXxs{
+	width: 12%;
+}
+.BtnSizeXs{
+	width: 15%;
+}
+.BtnSizeSm{
+	width: 20%;
+}
+.BtnSizeMedium{
+	width: 30%;
+}
+/*Size of Buttom*/
+.ContentBtn{
+	display: flex;
+	margin: 10px;
+}
+.BtnAdd{
+	color: var(--ColorBlue);
+	font-size: 2rem;
+}
+.BtnPagination{
+	color: var(--Pagination);
+	border-color: var(--Pagination);
+}
+.BtnPagination:hover{
+	color: var(--BackWht);
+	background-color: var(--Pagination);
+	border-color: var(--Pagination);
+}
+
+.OutNew{
+	color: #2c3e50;
+    border-color: #2c3e50;
+}
+.OutNew:hover{
+	background: #2c3e50;
+	color: #ffffff;
+    border-color: #2c3e50;
+}
+
+.OutLoad{
+	color: #7f8c8d;
+    border-color: #7f8c8d;
+}
+.OutLoad:hover{
+	background: #7f8c8d;
+	color: #ffffff;
+    border-color: #7f8c8d;
+}
+.OutSuccess{
+	color: var(--ColorSave);
+    border-color: var(--ColorSave);
+}
+.OutSuccess:hover{
+	background: var(--ColorSave);
+	color: #ffffff;
+    border-color: var(--ColorSave);
+}
+
+.InEdit{
+	color: var(--ColorSave);
+    border-color: var(--ColorSave);
+}
+.InEdit:hover{
+	background: var(--ColorSave);
+	color: #ffffff;
+    border-color: var(--ColorSave);
+}
+
+.InDanger{
+	color: #dc3545;
+    border-color: #dc3545;
+}
+.InDanger:hover{
+	background: #dc3545;
+	color: #ffffff;
+    border-color: #dc3545;
+}
+
+.OutDanger{
+	color: #dc3545;
+    border-color: #dc3545;
+}
+.OutDanger:hover{
+	background: #dc3545;
+	color: #ffffff;
+    border-color: #dc3545;
+}
+
+.OutNext{
+	color: #2980b9;
+    border-color: #2980b9;
+}
+.OutNext:hover{
+	background: #2980b9;
+	color: #ffffff;
+    border-color: #2980b9;
+}
+
+.OutBefore{
+	color: #f1c40f;
+    border-color: #f1c40f;
+}
+.OutBefore:hover{
+	background: #f1c40f;
+	color: #ffffff;
+    border-color: #f1c40f;
+}
+
+.OutNull{
+	color: #dc3545;
+    border-color: #dc3545;
+}
+.OutNull:hover{
+	background: #dc3545;
+	color: #ffffff;
+    border-color: #dc3545;
+}
+
+.OutUpdate{
+	color: #28a745;
+    border-color: #28a745;
+}
+.OutUpdate:hover{
+	background: #28a745;
+	color: #ffffff;
+    border-color: #28a745;
+}
+
+.OutTotal{
+	color: #007bff;
+    border-color: #007bff;
+}
+.OutTotal:hover{
+	background: #007bff;
+	color: #ffffff;
+    border-color: #007bff;
+}
+
+.OutPrint{
+	color: #17a2b8;
+    border-color: #17a2b8;
+}
+.OutPrint:hover{
+	background: #17a2b8;
+	color: #ffffff;
+    border-color: #17a2b8;
+}
+
+.OutLine{
+	color: #6c757d;
+    border-color: #6c757d;
+}
+.OutLine:hover{
+	background: #6c757d;
+	color: #ffffff;
+    border-color: #6c757d;
+}
+
+.OutExit{
+	color: #ffc107;
+    border-color: #ffc107;
+}
+.OutExit:hover{
+	background: #ffc107;
+	color: #ffffff;
+    border-color: #ffc107;
+}
+
+/*Botones*/
+/**************************************************************/
+
+/*************************************************************
+
+/*Formulario*/
+.ContentForm{
+	display: none;
+}
+
+.ActiveForm{
+	display: block;
+	animation-name: ActiveForm;
+    animation-duration: 1s;
+}
+
+@keyframes ActiveForm{
+    from{top:-330px; opacity: 0;}
+    to{top: 0;opacity: 1;}
+}
+.CustomerContent{
+	background-color: #ffffff;
+	border-radius: 5px;
+	width: 90%;
+	min-height: 400px;
+	padding: 16px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ContentBtn{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-top: 2px solid var(--ColorYellow);
+	padding-top: 16px;
+}
+
+
+/*.iconify:hover { width: 20px; height: 20px; }*/
+.SeccionItems{
+	display: flex;
+	align-items: center;
+}
+
+/*formularios*/
+.InputGroup{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.InputGroupVertical{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.LabelInput{
+	margin-bottom: 4px;
+	font-size: 1em;
+}
+.InputItems{
+	margin-bottom: 4px;
+	width: 100%;
+	height: 30px;
+	font-size: 1.2rem;
+	border: 1px solid #c3c3c3;
+}
+.InputExchange{
+	width: 10%;
+}
+.InputClientsBuy{
+	margin-bottom: 4px;
+	width: 100%;
+	height: 30px;
+	font-size: 1.2rem;
+	border: 1px solid #c3c3c3;
+}
+.InputComision{
+	margin-bottom: 4px;
+	width: 20%;
+	height: 30px;
+	font-size: 1.2rem;
+	border: 1px solid #c3c3c3;
+}
+
+.InputText{
+  	resize: none;
+  	margin-bottom: 4px;
+	width: 100%;
+	height: 80px;
+	font-size: 1.2rem;
+	border: 1px solid #c3c3c3;
+}
+.TipoDocItems{
+	margin-bottom: 4px;
+	width: 90%;
+	height: 30px;
+	font-size: 1.2rem;
+	border: 1px solid #c3c3c3;	
+}
+.DocumentItems{
+	margin-bottom: 4px;
+	width: 100%;
+	height: 30px;
+	font-size: 1.2rem;
+	border: 1px solid #c3c3c3;		
+}
+.InputItems:focus{
+	outline: 0;
+	border-bottom: 2px solid #003366;
+	animation-name: focus-input;
+  	animation-duration: 1s;
+}
+.InputFind{
+	width: 300px;
+}
+.InputQty{
+	width: 100px;
+	text-align: right;
+}
+@keyframes focus-input {
+  from{left: 0; opacity: 0;}
+    to{right: 100%;opacity: 1;}
+}
+
+.TypeDoc{
+	width: 95%;
+}
+.BtnAfter{
+	display: none;
+}
+.BtnNone{
+	display: none;
+}
+.BtnShow{
+	display: inline-block;
+}
+/*Formulario*/
+
+
+/*Table*/
+
+.Estado_Activo{
+	background-color: var(--ColorSave);
+	color: #f2f2f2;
+}
+.Estado_Inactivo{
+	background-color: var(--ColorCancel);
+	color: #f2f2f2;
+}
+
+.TableDepartament{
+	width: 100%;
+	margin-bottom: 16px;
+	display: grid;
+	grid-template-columns: 5% 9% 25% 25% 10% 10% 6% 8%;
+	grid-row: auto;
+	
+}
+.TableLocationZone{
+	width: 100%;
+	margin-bottom: 16px;
+	display: grid;
+	grid-template-columns: 5% 12% 35% 30% 6% 8%;
+	grid-row: auto;
+	
+}
+.Table{
+	width: 100%;
+	margin-bottom: 16px;
+	display: grid;
+	grid-template-columns: 5% 9% 23% 15% 15% 20% 6% 8%;
+	grid-row: auto;
+}
+.HeaderTable{
+	background: #353b48;
+	color: #fff;
+}
+.Border{
+	display: flex;
+	border:1px solid #dee2e6;
+	align-items: center;
+}
+.AlingContentCenter{
+	justify-content: center;
+}
+.AlingContentLeft{
+	justify-content: flex-start;
+}
+.AlingContentRight{
+	justify-content: flex-end;
+}
+.TextCenter{
+	text-align: center;
+}
+.TextLeft{
+	text-align: left;
+	padding-left: 5px;
+}
+.NumInputRight{
+	text-align: left;
+}
+.TextRight{
+	text-align: right;
+}
+
+.Details:nth-child(even) {
+    background-color: #ecf0f1;
+}
+.ContentPagination{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+/*Table*/
+
+/*Formularios de operaciones de venta, compras e inventario*/
+.FrmInputTotales{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+}
+
+.FrmInputTotales label{
+	color: #f2f2f6;
+	/*border:1px solid #fff;*/
+	width: 100%;
+	height: 18px;
+}
+
+.FrmInputTotales input{
+	background: #353b48;
+	color: #32ff7e;
+	width: 100%;
+	border:0;
+	outline:none;
+	text-align: right;
+}
+.BordeTotales{
+	margin: 10px;
+	background: #353b48;
+	padding: 10px;
+	width: 95%;
+	border-radius: 8px;
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.8);
+	z-index: 1;
+}
+/*Formularios de operaciones de venta, compras e inventario*/
+
+
+.spinner{
+	border:4px solid rgba(0,0,0,0.1);
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border-left-color: #09f; 
+	animation: spin 1s linear infinite;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	z-index: 100;
+}
+
+@keyframes spin{
+	0%{
+		-webkit-transform: rotate(0deg);
+		   -moz-transform: rotate(0deg);
+		    -ms-transform: rotate(0deg);
+		     -o-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+		   -moz-transform: rotate(360deg);
+		    -ms-transform: rotate(360deg);
+		     -o-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+
+/*Modal*/
+
+.Modal{
+    display: none;
+    background: rgba(52, 73, 94,0.8);
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+}
+.ViewModal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.HeaderModal{
+	background: -webkit-linear-gradient(left, #2980b9,#34495e);
+    width: 100%;
+    height: 10%;
+    border-radius: 5px 5px 0 0;
+    padding: 7px 20px 7px 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ModalHeaderItems{
+	color: #f2f2f2;
+	padding: 0 10px;
+}
+.ModalItems>a{
+	color: #f2f2f2;
+}
+.ModalItems, .FooterModal{
+    padding-right: 50px;
+}
+.BodyModal{
+	padding: 20px;
+    width: 100%;
+    max-width: 725px;
+    height: 75%;
+    max-height:350px; 
+}
+
+.FooterModal{
+    width: 100%;
+    height: 13%;
+	padding: 7px;
+    border-top: 1px solid var(--MenuSecond);
+    display: flex;
+    justify-content: space-between;
+}
+/*Ventanas Modal*/
+
+
